@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>   
+   <style>
+     body{
+       background-color: blue;
+     }
+     input{
+      background: #E4E4E4;
+    line-height: 50px;
+    border-radius: 5px;
+    padding: 0 22px;
+    font-size: 2em;
+    color: #555555;
+    outline: none;
+    border: none;
+    box-shadow: none;
+    font-size: 1em;
+    font-family: 'Roboto', sans-serif;
+     }
+     .class{
+       display: flex;
+       justify-content: center;
+       flex-direction: column;
+       align-items: center;
+       margin-top: 50vh;
+     }
+     button{
+      background: #E4E4E4;
+    line-height: 50px;
+    border-radius: 5px;
+    padding: 0 22px;
+    font-size: 2em;
+    color: #6d2929;
+    outline: none;
+     }
+   </style>
+</head>
+
+<body>
+ 
+    <div class="class">
+   <h1> Enter Number To find Factorial </h1>
+    <input id="starnumber" type="number" class="input">
+
+    <button onclick="star()" >Factorial </button>
+    <p class="c">
+
+    </p>
+  </div>
+    <script>
+         function factorial(n) 
+        { 
+
+          if (n <= 1)
+            {
+              return 1;
+            }
+          return n * factorial(n-1);
+         
+       }
+       function star(){
+    var input = document.querySelector(".input");
+    var c = document.querySelector(".c");
+    var result = factorial(input.value);
+    c.innerText = result;
+}
+
+    </script>
+</body>
+</html>
